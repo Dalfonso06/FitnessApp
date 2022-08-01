@@ -41,6 +41,70 @@
             </objects>
             <point key="canvasLocation" x="-125" y="-323"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="u3T-zw-bXO">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="FmC-c0-kha" customClass="LoginViewController" customModule="FitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cuR-md-KLJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZE-zS-Opn">
+                                <rect key="frame" x="20" y="452" width="374" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Yjk-Gu-8yY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="FmC-c0-kha" eventType="touchUpInside" id="Kcd-wo-Rn7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fur-18-eHZ">
+                                <rect key="frame" x="20" y="344" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pSA-2l-nOC">
+                                <rect key="frame" x="20" y="398" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Xn-2tL">
+                                <rect key="frame" x="136" y="498" width="144" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create an Account"/>
+                                <connections>
+                                    <action selector="createAccount:" destination="FmC-c0-kha" eventType="touchUpInside" id="NRj-eZ-2gC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1HV-x7-ki8"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="1HV-x7-ki8" firstAttribute="trailing" secondItem="dZE-zS-Opn" secondAttribute="trailing" constant="20" id="1YW-wA-8pt"/>
+                            <constraint firstItem="dZE-zS-Opn" firstAttribute="centerX" secondItem="pSA-2l-nOC" secondAttribute="centerX" id="4vl-3U-tq1"/>
+                            <constraint firstItem="dZE-zS-Opn" firstAttribute="leading" secondItem="1HV-x7-ki8" secondAttribute="leading" constant="20" id="Eak-sX-kwB"/>
+                            <constraint firstItem="pSA-2l-nOC" firstAttribute="leading" secondItem="1HV-x7-ki8" secondAttribute="leading" constant="20" id="SGO-er-n4C"/>
+                            <constraint firstItem="1HV-x7-ki8" firstAttribute="trailing" secondItem="fur-18-eHZ" secondAttribute="trailing" constant="20" id="Sf3-HZ-bSU"/>
+                            <constraint firstItem="pSA-2l-nOC" firstAttribute="top" secondItem="fur-18-eHZ" secondAttribute="bottom" constant="20" id="XhG-l4-aOh"/>
+                            <constraint firstItem="TWo-Xn-2tL" firstAttribute="leading" secondItem="1HV-x7-ki8" secondAttribute="leading" constant="136" id="Z5q-Qz-ytp"/>
+                            <constraint firstItem="fur-18-eHZ" firstAttribute="leading" secondItem="1HV-x7-ki8" secondAttribute="leading" constant="20" id="adx-K4-3iw"/>
+                            <constraint firstAttribute="trailing" secondItem="pSA-2l-nOC" secondAttribute="trailing" constant="20" id="ogE-22-ofR"/>
+                            <constraint firstItem="dZE-zS-Opn" firstAttribute="top" secondItem="pSA-2l-nOC" secondAttribute="bottom" constant="20" id="pox-MC-d53"/>
+                            <constraint firstItem="fur-18-eHZ" firstAttribute="top" secondItem="1HV-x7-ki8" secondAttribute="top" constant="300" id="rAe-BU-nWN"/>
+                            <constraint firstItem="TWo-Xn-2tL" firstAttribute="top" secondItem="dZE-zS-Opn" secondAttribute="bottom" constant="10" id="y64-ap-wtR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordText" destination="pSA-2l-nOC" id="7jk-8O-ZUi"/>
+                        <outlet property="userText" destination="fur-18-eHZ" id="JBw-If-USq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A4P-Sm-pib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="-1655.3571428571429"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9JQ-xL-X2v">
             <objects>
@@ -82,7 +146,6 @@
         <!--Notifications-->
         <scene sceneID="rcu-uC-OET">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nCd-Kg-jOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Notifications" id="fhx-pm-FEt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="ZC3-Ws-Wj1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rqu-tw-xQo">
@@ -93,6 +156,7 @@
                         <segue destination="qfs-ID-MIy" kind="relationship" relationship="rootViewController" id="MDn-pX-Q96"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nCd-Kg-jOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1920" y="-324"/>
         </scene>
@@ -203,6 +267,9 @@
         <image name="speedometer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
