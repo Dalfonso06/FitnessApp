@@ -12,15 +12,14 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
-        // Do any additional setup after loading the view.
         
+        // Do any additional setup after loading the view.
+        handleInvalid()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        handleInvalid()
     }
     
     private func handleInvalid() {
@@ -35,7 +34,6 @@ class HomeViewController: UIViewController {
             present(loginVC, animated: false)
         }
     }
-
 
 }
 
