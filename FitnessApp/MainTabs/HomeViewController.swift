@@ -26,10 +26,7 @@ class HomeViewController: UIViewController {
         // Check auth status
         if Auth.auth().currentUser == nil {
             // Show log in, stays logged in
-            guard let loginVC = storyboard?.instantiateViewController(identifier: "Login") as? LoginViewController else {
-                print("failed")
-                return
-            }
+            let loginVC = LoginViewController()
             loginVC.modalPresentationStyle = .fullScreen
             present(loginVC, animated: false)
         }

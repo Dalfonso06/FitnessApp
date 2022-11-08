@@ -19,7 +19,7 @@ class CreateAccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .systemGray
         // Do any additional setup after loading the view.
     }
     

@@ -66,10 +66,7 @@ final class SettingsViewController: UIViewController {
                 DispatchQueue.main.async {
                     if success {
                         // present log in
-                        guard let loginVC = self.storyboard?.instantiateViewController(identifier: "Login") as? LoginViewController else {
-                            print("failed")
-                            return
-                        }
+                        let loginVC = LoginViewController()
                         loginVC.modalPresentationStyle = .fullScreen
                         self.present(loginVC, animated: true) {
                             // completion section allows the hometab to show up after login again
