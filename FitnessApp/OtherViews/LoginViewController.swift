@@ -11,7 +11,7 @@ class LoginViewController: UIViewController {
 
     // Provide Consistency in styling
     struct Constants {
-        static let cornerRadius: CGFloat = 8.0
+        static let cornerRadius: CGFloat = 25.0
     }
     
     // Declaring all buttons
