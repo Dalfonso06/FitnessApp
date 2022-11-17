@@ -8,28 +8,159 @@
 import UIKit
 
 class CreateAccountViewController: UIViewController {
-
-    @IBOutlet weak var registerUsername: UITextField!
     
-    @IBOutlet weak var registerEmail: UITextField!
+    // Provide consistency in styling
+    struct Constants {
+        static let cornerRadius: CGFloat = 25.0
+    }
     
-    @IBOutlet weak var registerPassword: UITextField!
+    // Declare all buttons and fields
+    private let registerUsernameField: UITextField = {
+        let field = UITextField()
+        field.placeholder = "Enter Username"
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
+        field.backgroundColor = .secondarySystemBackground
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        return field
+    }()
     
-    @IBOutlet weak var confirmPassword: UITextField!
+    private let registerEmailField: UITextField = {
+        let field = UITextField()
+        field.placeholder = "Enter Email"
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
+        field.backgroundColor = .secondarySystemBackground
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        return field
+    }()
+    
+    private let registerPasswordField: UITextField = {
+        let field = UITextField()
+        field.isSecureTextEntry = true
+        field.placeholder = "Enter Password"
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
+        field.backgroundColor = .secondarySystemBackground
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        return field
+    }()
+    
+    private let confirmPasswordField: UITextField = {
+        let field = UITextField()
+        field.isSecureTextEntry = true
+        field.placeholder = "Re-Enter Password"
+        field.returnKeyType = .next
+        field.leftViewMode = .always
+        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        field.autocapitalizationType = .none
+        field.autocorrectionType = .no
+        field.layer.masksToBounds = true
+        field.layer.cornerRadius = Constants.cornerRadius
+        field.backgroundColor = .secondarySystemBackground
+        field.layer.borderWidth = 1.0
+        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        return field
+    }()
+    
+    private let registerButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Register", for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Constants.cornerRadius
+        button.backgroundColor = .systemTeal
+        button.setTitleColor(.white, for: .normal)
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray
+        
+        registerButton.addTarget(self,
+                              action: #selector(registerAccount),
+                              for: .touchUpInside)
+        
+        registerUsernameField.delegate = self
+        registerEmailField.delegate = self
+        registerPasswordField.delegate = self
+        confirmPasswordField.delegate = self
+        addSubviews()
+        view.backgroundColor = .systemBackground
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func createAccount(_ sender: Any) {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
-        guard let email = registerEmail.text, !email.isEmpty,
-              let password = registerPassword.text, !password.isEmpty, password.count >= 8,
-              let username = registerUsername.text, !username.isEmpty, password == confirmPassword.text! else {
-                  return
-              }
+        // assign frames to text fields and button
+        registerUsernameField.frame = CGRect(
+            x: 25,
+            y: 25,
+            width: view.width - 50,
+            height: 52.0
+        )
+        
+        registerEmailField.frame = CGRect(
+            x: 25,
+            y: registerUsernameField.bottom + 15,
+            width: view.width - 50,
+            height: 52.0
+        )
+        
+        registerPasswordField.frame = CGRect(
+            x: 25,
+            y: registerEmailField.bottom + 15,
+            width: view.width - 50,
+            height: 52.0
+        )
+        
+        confirmPasswordField.frame = CGRect(
+            x: 25,
+            y: registerPasswordField.bottom + 15,
+            width: view.width - 50,
+            height: 52.0
+        )
+        
+        registerButton.frame = CGRect(
+            x: 25,
+            y: confirmPasswordField.bottom + 15,
+            width: view.width - 50,
+            height: 52.0
+        )
+    }
+    
+    private func addSubviews() {
+        view.addSubview(registerUsernameField)
+        view.addSubview(registerEmailField)
+        view.addSubview(registerPasswordField)
+        view.addSubview(confirmPasswordField)
+        view.addSubview(registerButton)
+    }
+    
+    @objc private func registerAccount() {
+        guard let email = registerUsernameField.text, !email.isEmpty,
+              let password = registerPasswordField.text, !password.isEmpty, password.count >= 8,
+              let username = registerUsernameField.text, !username.isEmpty, password == confirmPasswordField.text! else {
+            return
+        }
         
         AuthManager.shared.registerNewUser(username: username, email: email, password: password) { registered in
             DispatchQueue.main.async {
@@ -41,5 +172,21 @@ class CreateAccountViewController: UIViewController {
             }
         }
     }
-    
+}
+
+// When user presses enter, move to next text field
+extension CreateAccountViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == registerUsernameField {
+            registerEmailField.becomeFirstResponder()
+        }
+        else if textField == registerEmailField {
+            registerPasswordField.becomeFirstResponder()
+        }
+        else if textField == confirmPasswordField {
+            registerAccount()
+        }
+        
+        return true
+    }
 }

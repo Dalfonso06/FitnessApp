@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    // Provide Consistency in styling
+    // Provide consistency in styling
     struct Constants {
         static let cornerRadius: CGFloat = 25.0
     }
@@ -129,7 +129,6 @@ class LoginViewController: UIViewController {
             width: view.width - 50,
             height: 52.0
         )
-        
     }
     
     private func addSubviews() {
@@ -158,6 +157,7 @@ class LoginViewController: UIViewController {
     }
 }
 
+// When user presses enter, move to next text field
 extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == usernameEmailField {
