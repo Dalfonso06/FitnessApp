@@ -37,6 +37,7 @@ public class AuthManager {
                             completion(true)
                             return
                         } else {
+                            // Failed to insert to database
                             completion(false)
                             return
                         }
@@ -60,7 +61,8 @@ public class AuthManager {
                 
                 completion(true)
             }
-        } else if let username = username {
+        }
+        else if let username = username {
             // username
             print(username)
         }

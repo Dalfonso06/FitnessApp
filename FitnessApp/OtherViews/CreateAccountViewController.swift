@@ -156,6 +156,10 @@ class CreateAccountViewController: UIViewController {
     }
     
     @objc private func registerAccount() {
+        registerEmailField.resignFirstResponder()
+        registerUsernameField.resignFirstResponder()
+        registerPasswordField.resignFirstResponder()
+        
         guard let email = registerUsernameField.text, !email.isEmpty,
               let password = registerPasswordField.text, !password.isEmpty, password.count >= 8,
               let username = registerUsernameField.text, !username.isEmpty, password == confirmPasswordField.text! else {
