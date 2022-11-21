@@ -162,7 +162,7 @@ class CreateAccountViewController: UIViewController {
         
         guard let email = registerUsernameField.text, !email.isEmpty,
               let password = registerPasswordField.text, !password.isEmpty, password.count >= 8,
-              let username = registerUsernameField.text, !username.isEmpty, password == confirmPasswordField.text! else {
+              let username = registerUsernameField.text, !username.isEmpty, password == confirmPasswordField.text else {
             return
         }
         
@@ -170,8 +170,10 @@ class CreateAccountViewController: UIViewController {
             DispatchQueue.main.async {
                 if registered {
                     // worked
+                    print("worked")
                 } else {
                     // failed
+                    print("failed")
                 }
             }
         }
