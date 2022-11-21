@@ -113,7 +113,7 @@ class CreateAccountViewController: UIViewController {
         // assign frames to text fields and button
         registerUsernameField.frame = CGRect(
             x: 25,
-            y: 25,
+            y: 100,
             width: view.width - 50,
             height: 52.0
         )
