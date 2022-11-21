@@ -71,7 +71,7 @@ class LoginViewController: UIViewController {
         return header
     }()
     
-    
+    // View did load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    // View did layout subviews
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -131,6 +131,7 @@ class LoginViewController: UIViewController {
         )
     }
     
+    /// Adds all subviews to view controller
     private func addSubviews() {
         view.addSubview(usernameEmailField)
         view.addSubview(passwordField)

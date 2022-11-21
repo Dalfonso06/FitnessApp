@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
         
     }
     
+    /// Allow whether a user is logged in or not
     private func handleInvalid() {
         // Check auth status
         if Auth.auth().currentUser == nil {

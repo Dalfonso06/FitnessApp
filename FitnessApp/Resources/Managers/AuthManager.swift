@@ -13,6 +13,11 @@ public class AuthManager {
     
     // MARK: - Public
     
+    /// Registers new users to database
+    /// - Parameters
+    ///     - username: user's username
+    ///     - email: user's email
+    ///     - password: user's password
     public func registerNewUser(username: String, email: String, password: String, completion: @escaping (Bool) -> Void) {
         /*
          - Check if username is available
@@ -50,6 +55,11 @@ public class AuthManager {
         }
     }
     
+    /// Login the user into the database
+    /// - Parameters
+    ///     - username: user's username
+    ///     - email: user's email
+    ///     - password: user's password
     public func loginUser(username: String?, email: String?, password: String, completion: @escaping (Bool) -> Void) {
         if let email = email {
             // email
