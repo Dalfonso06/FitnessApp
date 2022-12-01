@@ -11,7 +11,7 @@ class CreateAccountViewController: UIViewController {
     
     // Provide consistency in styling
     struct Constants {
-        static let cornerRadius: CGFloat = 25.0
+        static let cornerRadius: CGFloat = 15.0
     }
     
     // Declare all buttons and fields
@@ -26,8 +26,8 @@ class CreateAccountViewController: UIViewController {
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
         field.backgroundColor = .secondarySystemBackground
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        // field.layer.borderWidth = 1.0
+        // field.layer.borderColor = UIColor.secondaryLabel.cgColor
         return field
     }()
     
@@ -42,8 +42,8 @@ class CreateAccountViewController: UIViewController {
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
         field.backgroundColor = .secondarySystemBackground
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        // field.layer.borderWidth = 1.0
+        // field.layer.borderColor = UIColor.secondaryLabel.cgColor
         return field
     }()
     
@@ -59,8 +59,8 @@ class CreateAccountViewController: UIViewController {
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
         field.backgroundColor = .secondarySystemBackground
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        // field.layer.borderWidth = 1.0
+        // field.layer.borderColor = UIColor.secondaryLabel.cgColor
         return field
     }()
     
@@ -76,8 +76,8 @@ class CreateAccountViewController: UIViewController {
         field.layer.masksToBounds = true
         field.layer.cornerRadius = Constants.cornerRadius
         field.backgroundColor = .secondarySystemBackground
-        field.layer.borderWidth = 1.0
-        field.layer.borderColor = UIColor.secondaryLabel.cgColor
+        // field.layer.borderWidth = 1.0
+        // field.layer.borderColor = UIColor.secondaryLabel.cgColor
         return field
     }()
     
