@@ -24,6 +24,9 @@
 		247817F9289723B800947FAD /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247817F8289723B800947FAD /* StorageManager.swift */; };
 		247F87E228AC617600279255 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F87E128AC617600279255 /* Extensions.swift */; };
 		2485A1E528974923009B35C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485A1E428974923009B35C6 /* CreateAccountViewController.swift */; };
+		248FD73D29414F32003F6000 /* FitnessFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD73C29414F32003F6000 /* FitnessFeedPostTableViewCell.swift */; };
+		248FD7402941517B003F6000 /* FitnessPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD73F2941517B003F6000 /* FitnessPostHeaderTableViewCell.swift */; };
+		248FD742294151CA003F6000 /* FitnessPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD741294151CA003F6000 /* FitnessPostActionTableViewCell.swift */; };
 		24FB2F49290453B800B594FF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FB2F48290453B800B594FF /* SettingsViewController.swift */; };
 		AB439C1C7E08555A6D1E4925 /* Pods_FitnessApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBDDAF8797B1C79FA48B582 /* Pods_FitnessApp.framework */; };
 /* End PBXBuildFile section */
@@ -49,6 +52,9 @@
 		247817F8289723B800947FAD /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		247F87E128AC617600279255 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/danielalfonso/Desktop/FitnessApp/FitnessApp/Resources/Extensions.swift; sourceTree = "<absolute>"; };
 		2485A1E428974923009B35C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		248FD73C29414F32003F6000 /* FitnessFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessFeedPostTableViewCell.swift; sourceTree = "<group>"; };
+		248FD73F2941517B003F6000 /* FitnessPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		248FD741294151CA003F6000 /* FitnessPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPostActionTableViewCell.swift; sourceTree = "<group>"; };
 		24FB2F48290453B800B594FF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = FitnessApp/OtherViews/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		BCBDDAF8797B1C79FA48B582 /* Pods_FitnessApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitnessApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C65F5C41C5B9FE01CFCEACD4 /* Pods-FitnessApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.debug.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 		246CEFCC28949E76004342C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				248FD73B29414EE8003F6000 /* Cells */,
 				247817FA289723C900947FAD /* Managers */,
 				246CEFB828949857004342C4 /* Assets.xcassets */,
 				246CEFAF28949854004342C4 /* AppDelegate.swift */,
@@ -148,6 +155,24 @@
 				247817F62897237E00947FAD /* AuthManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		248FD73B29414EE8003F6000 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				248FD73E29415152003F6000 /* Home Feed */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		248FD73E29415152003F6000 /* Home Feed */ = {
+			isa = PBXGroup;
+			children = (
+				248FD73C29414F32003F6000 /* FitnessFeedPostTableViewCell.swift */,
+				248FD73F2941517B003F6000 /* FitnessPostHeaderTableViewCell.swift */,
+				248FD741294151CA003F6000 /* FitnessPostActionTableViewCell.swift */,
+			);
+			path = "Home Feed";
 			sourceTree = "<group>";
 		};
 		F2A08F538C8E2030A4E82147 /* Pods */ = {
@@ -292,10 +317,13 @@
 				247817F12896E8CF00947FAD /* LoginViewController.swift in Sources */,
 				246CEFCB28949E70004342C4 /* ProfileViewController.swift in Sources */,
 				247F87E228AC617600279255 /* Extensions.swift in Sources */,
+				248FD73D29414F32003F6000 /* FitnessFeedPostTableViewCell.swift in Sources */,
 				24FB2F49290453B800B594FF /* SettingsViewController.swift in Sources */,
 				246CEFB228949854004342C4 /* SceneDelegate.swift in Sources */,
 				246CEFC528949E3C004342C4 /* DiscoveryViewController.swift in Sources */,
+				248FD7402941517B003F6000 /* FitnessPostHeaderTableViewCell.swift in Sources */,
 				247817F5289722E200947FAD /* DatabaseManager.swift in Sources */,
+				248FD742294151CA003F6000 /* FitnessPostActionTableViewCell.swift in Sources */,
 				247817F72897237E00947FAD /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
