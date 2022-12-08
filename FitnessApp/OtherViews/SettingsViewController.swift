@@ -49,25 +49,25 @@ final class SettingsViewController: UIViewController {
     private func configureModels() {
         data.append([
             SettingCellModel(title: "Edit Profile") { [weak self] in
-                
+                self?.editProfileTapped()
             },
             SettingCellModel(title: "Invite Friends") { [weak self] in
-                
+                self?.inviteFriendsTapped()
             },
             SettingCellModel(title: "Save Original Posts") { [weak self] in
-                
+                self?.saveOriginalPostsTapped()
             }
         ])
         
         data.append([
             SettingCellModel(title: "Terms of Service") { [weak self] in
-                
+                self?.termsOfServiceTapped()
             },
             SettingCellModel(title: "Privacy Policy") { [weak self] in
-                
+                self?.privacyPolicyTapped()
             },
             SettingCellModel(title: "Help / Feedback") { [weak self] in
-                
+                self?.helpFeedbackTapped()
             }
         ])
         
@@ -78,6 +78,40 @@ final class SettingsViewController: UIViewController {
         ])
     }
     
+    /// Allow user edit their profile
+    private func editProfileTapped() {
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        present(navVC, animated: true)
+    }
+    
+    /// Show a share sheet to invite friends
+    private func inviteFriendsTapped() {
+        // Show a share sheet to invite friends
+    }
+    
+    /// Save original posts
+    private func saveOriginalPostsTapped() {
+        
+    }
+    
+    // TODO: Later include links to open up terms/privacy/help pages  (part 6)
+    
+    /// Bring up terms of service
+    private func termsOfServiceTapped() {
+        
+    }
+    
+    /// Bring up privacy policy
+    private func privacyPolicyTapped() {
+        
+    }
+    
+    /// Let user ask questions and provide feedback
+    private func helpFeedbackTapped() {
+        
+    }
     
     /// Allow the user to logout
     private func logoutTapped() {

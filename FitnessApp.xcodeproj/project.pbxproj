@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240520C22942402300893271 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240520C12942402200893271 /* EditProfileViewController.swift */; };
 		246CEFB028949854004342C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFAF28949854004342C4 /* AppDelegate.swift */; };
 		246CEFB228949854004342C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFB128949854004342C4 /* SceneDelegate.swift */; };
 		246CEFB428949854004342C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFB328949854004342C4 /* HomeViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		0BCC9BB0CA201CA11E1707C5 /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
+		240520C12942402200893271 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		246CEFAC28949854004342C4 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246CEFAF28949854004342C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246CEFB128949854004342C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				247817F02896E8CF00947FAD /* LoginViewController.swift */,
 				2485A1E428974923009B35C6 /* CreateAccountViewController.swift */,
 				24FB2F48290453B800B594FF /* SettingsViewController.swift */,
+				240520C12942402200893271 /* EditProfileViewController.swift */,
 			);
 			path = OtherViews;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				246CEFB028949854004342C4 /* AppDelegate.swift in Sources */,
 				247817F12896E8CF00947FAD /* LoginViewController.swift in Sources */,
 				246CEFCB28949E70004342C4 /* ProfileViewController.swift in Sources */,
+				240520C22942402300893271 /* EditProfileViewController.swift in Sources */,
 				247F87E228AC617600279255 /* Extensions.swift in Sources */,
 				248FD73D29414F32003F6000 /* FitnessFeedPostTableViewCell.swift in Sources */,
 				24FB2F49290453B800B594FF /* SettingsViewController.swift in Sources */,
