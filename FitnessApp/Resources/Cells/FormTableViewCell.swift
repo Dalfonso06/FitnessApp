@@ -7,13 +7,15 @@
 
 import UIKit
 
-protocol FormTableViewCellDelegate {
+protocol FormTableViewCellDelegate: AnyObject {
     func formTableViewCell(_ cell: FormTableViewCell, didUpdateField value: String?)
 }
 
 class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     static let identifier = "FormTableViewCell"
+    
+    public weak var delegate: FormTableViewCellDelegate?
     
     private let formLabel: UILabel = {
         let label = UILabel()
@@ -64,6 +66,7 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
     // MARK: Field
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        delegate?.formTableViewCell(self, didUpdateField: textField.text)
         textField.resignFirstResponder()
         return true
     }

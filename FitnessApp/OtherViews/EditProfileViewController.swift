@@ -106,7 +106,7 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
         let model = models[indexPath.section][indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: FormTableViewCell.identifier, for: indexPath) as! FormTableViewCell
         cell.configureCell(with: model)
-        cell.textLabel?.text = model.label
+        cell.delegate = self
         return cell
     }
     
@@ -146,4 +146,10 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
         present(actionSheet, animated: true)
     }
 
+}
+
+extension EditProfileViewController: FormTableViewCellDelegate {
+    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField value: String?) {
+        print("Field updated to \(value ?? "nil")")
+    }
 }
