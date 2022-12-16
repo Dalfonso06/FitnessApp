@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		240520C22942402300893271 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240520C12942402200893271 /* EditProfileViewController.swift */; };
+		2453C62F294C30F100D23F8A /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2453C62E294C30F100D23F8A /* FormTableViewCell.swift */; };
 		246CEFB028949854004342C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFAF28949854004342C4 /* AppDelegate.swift */; };
 		246CEFB228949854004342C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFB128949854004342C4 /* SceneDelegate.swift */; };
 		246CEFB428949854004342C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246CEFB328949854004342C4 /* HomeViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		0BCC9BB0CA201CA11E1707C5 /* Pods-FitnessApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitnessApp.release.xcconfig"; path = "Target Support Files/Pods-FitnessApp/Pods-FitnessApp.release.xcconfig"; sourceTree = "<group>"; };
 		240520C12942402200893271 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		2453C62E294C30F100D23F8A /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		246CEFAC28949854004342C4 /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		246CEFAF28949854004342C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		246CEFB128949854004342C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				248FD73E29415152003F6000 /* Home Feed */,
+				2453C62E294C30F100D23F8A /* FormTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				246CEFC728949E56004342C4 /* ActionViewController.swift in Sources */,
 				247817F9289723B800947FAD /* StorageManager.swift in Sources */,
 				246CEFC928949E62004342C4 /* NotificationViewController.swift in Sources */,
+				2453C62F294C30F100D23F8A /* FormTableViewCell.swift in Sources */,
 				246CEFB028949854004342C4 /* AppDelegate.swift in Sources */,
 				247817F12896E8CF00947FAD /* LoginViewController.swift in Sources */,
 				246CEFCB28949E70004342C4 /* ProfileViewController.swift in Sources */,
