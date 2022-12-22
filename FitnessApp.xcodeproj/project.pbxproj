@@ -26,6 +26,8 @@
 		247817F9289723B800947FAD /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247817F8289723B800947FAD /* StorageManager.swift */; };
 		247F87E228AC617600279255 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247F87E128AC617600279255 /* Extensions.swift */; };
 		2485A1E528974923009B35C6 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485A1E428974923009B35C6 /* CreateAccountViewController.swift */; };
+		248E96672954F09D00D6A38F /* ProfileInfoHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E96662954F09D00D6A38F /* ProfileInfoHeaderCollectionReusableView.swift */; };
+		248E96692954F0D900D6A38F /* ProfileTabsCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248E96682954F0D900D6A38F /* ProfileTabsCollectionReusableView.swift */; };
 		248FD73D29414F32003F6000 /* FitnessFeedPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD73C29414F32003F6000 /* FitnessFeedPostTableViewCell.swift */; };
 		248FD7402941517B003F6000 /* FitnessPostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD73F2941517B003F6000 /* FitnessPostHeaderTableViewCell.swift */; };
 		248FD742294151CA003F6000 /* FitnessPostActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248FD741294151CA003F6000 /* FitnessPostActionTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 		247817F8289723B800947FAD /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		247F87E128AC617600279255 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = /Users/danielalfonso/Desktop/FitnessApp/FitnessApp/Resources/Extensions.swift; sourceTree = "<absolute>"; };
 		2485A1E428974923009B35C6 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		248E96662954F09D00D6A38F /* ProfileInfoHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		248E96682954F0D900D6A38F /* ProfileTabsCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabsCollectionReusableView.swift; sourceTree = "<group>"; };
 		248FD73C29414F32003F6000 /* FitnessFeedPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessFeedPostTableViewCell.swift; sourceTree = "<group>"; };
 		248FD73F2941517B003F6000 /* FitnessPostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		248FD741294151CA003F6000 /* FitnessPostActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessPostActionTableViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 		246CEFCC28949E76004342C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				248E96642954F01700D6A38F /* CollectionView Headers */,
 				248FD73B29414EE8003F6000 /* Cells */,
 				247817FA289723C900947FAD /* Managers */,
 				246CEFB828949857004342C4 /* Assets.xcassets */,
@@ -160,6 +165,15 @@
 				247817F62897237E00947FAD /* AuthManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		248E96642954F01700D6A38F /* CollectionView Headers */ = {
+			isa = PBXGroup;
+			children = (
+				248E96662954F09D00D6A38F /* ProfileInfoHeaderCollectionReusableView.swift */,
+				248E96682954F0D900D6A38F /* ProfileTabsCollectionReusableView.swift */,
+			);
+			path = "CollectionView Headers";
 			sourceTree = "<group>";
 		};
 		248FD73B29414EE8003F6000 /* Cells */ = {
@@ -314,9 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				248E96672954F09D00D6A38F /* ProfileInfoHeaderCollectionReusableView.swift in Sources */,
 				2485A1E528974923009B35C6 /* CreateAccountViewController.swift in Sources */,
 				246CEFB428949854004342C4 /* HomeViewController.swift in Sources */,
 				246CEFC728949E56004342C4 /* ActionViewController.swift in Sources */,
+				248E96692954F0D900D6A38F /* ProfileTabsCollectionReusableView.swift in Sources */,
 				247817F9289723B800947FAD /* StorageManager.swift in Sources */,
 				246CEFC928949E62004342C4 /* NotificationViewController.swift in Sources */,
 				2453C62F294C30F100D23F8A /* FormTableViewCell.swift in Sources */,
