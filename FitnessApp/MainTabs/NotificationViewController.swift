@@ -16,6 +16,7 @@ class NotificationViewController: UIViewController {
         return tableView
     }()
     
+    // TODO: Get rid of tab bar title
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
