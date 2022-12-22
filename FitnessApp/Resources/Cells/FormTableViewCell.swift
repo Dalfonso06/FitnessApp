@@ -8,14 +8,15 @@
 import UIKit
 
 protocol FormTableViewCellDelegate: AnyObject {
-    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField value: String?)
+    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField updatedModel: EditProfileFormModel)
 }
 
 class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     static let identifier = "FormTableViewCell"
-    
+    private var model: EditProfileFormModel?
     public weak var delegate: FormTableViewCellDelegate?
+    
     
     private let formLabel: UILabel = {
         let label = UILabel()
@@ -43,6 +44,7 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     public func configureCell(with model: EditProfileFormModel) {
+        self.model = model
         formLabel.text = model.label
         field.placeholder = model.placeHolder
         field.text = model.value
@@ -66,7 +68,11 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
     // MARK: Field
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        delegate?.formTableViewCell(self, didUpdateField: textField.text)
+        model?.value = textField.text
+        guard let model = model else {
+            return true
+        }
+        delegate?.formTableViewCell(self, didUpdateField: model)
         textField.resignFirstResponder()
         return true
     }

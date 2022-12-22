@@ -119,14 +119,18 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
     
     // MARK: - Action
     
+    /// Save edit profile information in the form
     @objc private func saveTapped() {
         // Save the information to the database
+        dismiss(animated: true, completion: nil)
     }
     
+    /// Remove current view controller
     @objc private func cancelTapped() {
         dismiss(animated: true, completion: nil)
     }
     
+    /// Profile picture was pressed and reveals photo import function
     @objc private func changeProfilePictureTapped() {
         let actionSheet = UIAlertController(title: "Profile Picture",
                                             message: "Change Profile Picture",
@@ -149,7 +153,7 @@ final class EditProfileViewController: UIViewController, UITableViewDataSource {
 }
 
 extension EditProfileViewController: FormTableViewCellDelegate {
-    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField value: String?) {
-        print("Field updated to \(value ?? "nil")")
+    func formTableViewCell(_ cell: FormTableViewCell, didUpdateField updatedModel: EditProfileFormModel) {
+        print(updatedModel.value ?? nil)
     }
 }
